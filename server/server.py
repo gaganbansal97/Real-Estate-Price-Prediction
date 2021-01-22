@@ -10,7 +10,7 @@ def get_location_names():
         'locations': util.get_location_names()
     })
     response.headers.add('Access-Control-Allow-Origin', '*')
-
+    #return ('response')
     return response
 
 
@@ -31,6 +31,7 @@ def predict_home_price():
 
 if __name__ == '__main__':
     print('Server is running')
+    util.load_saved_artifacts()
     app.run()
 
 
