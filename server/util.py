@@ -21,6 +21,7 @@ def load_saved_artifacts():
         __locations = __data_columns[3:]
 
     global __model
+
     if __model is None:
         with open('./artifacts/banglore_home_prices_model.pickle', 'rb') as f:
             __model = pickle.load(f)
